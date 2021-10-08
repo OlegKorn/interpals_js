@@ -1,9 +1,9 @@
 const arrow = document.querySelector(".photoNext a")
-const firstU = document.querySelector(".photoBox a")["style"]["background"]
+const firstFotoUrl = document.querySelector(".photoBox a")["style"]["background"]
 
-const initialFoto = firstU.substring(
-    firstU.indexOf('https://'), 
-    firstU.lastIndexOf('?c')
+const initialFoto = firstFotoUrl.substring(
+    firstFotoUrl.indexOf('https://'), 
+    firstFotoUrl.lastIndexOf('?c')
 )
 fotos = []
 
@@ -12,11 +12,12 @@ fotos.push(initialFoto)
 for(let i = 0; i < 50; i++) {
   setTimeout(()=> {
     arrow.click()
-    let u = document.querySelector(".photoBox a")["style"]["background"]
+      
+    let fotoUrl = document.querySelector(".photoBox a")["style"]["background"]
 
-    let foto = u.substring(
-        u.indexOf('https://'), 
-        u.lastIndexOf('?c')
+    let foto = fotoUrl.substring(
+        fotoUrl.indexOf('https://'), 
+        fotoUrl.lastIndexOf('?c')
     )
 
     if (foto !== initialFoto) { 
