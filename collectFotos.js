@@ -1,3 +1,8 @@
+fotoUrl = document.querySelector(".photoBox a") 
+fotoUrl.attributes.style.nodeValue.split('url("').pop().split('")')[0]
+''''''''''''''''''
+
+
 const arrow = document.querySelector(".photoNext a")
 const firstFotoUrl = document.querySelector(".photoBox a")["style"]["background"]
 
